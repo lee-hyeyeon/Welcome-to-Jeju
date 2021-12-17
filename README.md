@@ -10,9 +10,8 @@
 <br>
 
 ## 👭 팀원 소개
-|||
-|:---:|:---:|
 |이서은|이혜연|
+|:---:|:---:|
 |Back-End|Back-End|
 |[GitHub](https://github.com/leeseoeun)|[GitHub](https://github.com/lee-hyeyeon)|
 
