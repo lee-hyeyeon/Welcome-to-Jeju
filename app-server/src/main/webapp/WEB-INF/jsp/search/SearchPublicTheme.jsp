@@ -16,6 +16,9 @@
 }
 </style>
 
+<div class="container">
+  <div class="main-container">
+
 <br>
 <br>
 <br>
@@ -23,7 +26,7 @@
 <br>
 
 <form id="search-form" action="${contextRoot}/app/search/all">
-
+<div class="select" style="margin-left: -100px;">
 	<label class="checkbox-inline">
 		<input type="checkbox" name="option" id="inlineCheckbox1" value="all">
 		전체검색
@@ -40,8 +43,7 @@
 		<input type="checkbox" name="option" id="inlineCheckbox4" value="user">
 		유저
 	</label>
-
-	<br>
+</div>
 	<div class="search-container">
 		<input type="text" placeholder="⌨ 키워드를 입력해주세요!" name="keyword" id="search-bar">
 		<button class="search-icon">
@@ -50,7 +52,6 @@
 	</div>
 </form>
 
-<div class="hot-theme">
 	<div class="title">
 		<br> <br>
 		<h1 style="text-align: center;">🔎 '${keyword}'로 검색한 유저 테마 목록</h1>
@@ -73,7 +74,7 @@
 			</li>
 			</a>
 		</c:forEach>
-		<c:forEach begin="0" end="${3-(fn:length(themeList)%3)-1}">
+		<c:forEach begin="0" end="${3-(fn:length(publicThemeList)%3)-1}">
 			<a class="list-container" style="visibility: hidden;">
 				<li>
 					<div class="content">
@@ -84,5 +85,7 @@
 			</a>
 		</c:forEach>
 	</ul>
-</div>
+	<br><br><br><br>
+	</div>
+	</div>
 

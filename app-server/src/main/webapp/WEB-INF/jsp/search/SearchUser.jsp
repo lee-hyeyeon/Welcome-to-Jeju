@@ -16,6 +16,9 @@
 }
 </style>
 
+<div class="container">
+  <div class="main-container">
+  
 <br>
 <br>
 <br>
@@ -23,7 +26,7 @@
 <br>
 
 <form id="search-form" action="${contextRoot}/app/search/all">
-
+<div class="select" style="margin-left: -100px;">
 	<label class="checkbox-inline">
 		<input type="checkbox" name="option" id="inlineCheckbox1" value="all">
 		전체검색
@@ -40,8 +43,7 @@
 		<input type="checkbox" name="option" id="inlineCheckbox4" value="user">
 		유저
 	</label>
-
-	<br>
+</div>
 	<div class="search-container">
 		<input type="text" placeholder="⌨ 키워드를 입력해주세요!" name="keyword" id="search-bar">
 		<button class="search-icon">
@@ -67,5 +69,7 @@
 			</c:forEach>
 		</ul>
 	</div>
+</div>
+</div>
 </div>
 

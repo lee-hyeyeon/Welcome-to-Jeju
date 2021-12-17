@@ -20,10 +20,10 @@
 <br>
 <br>
 <h1 style="text-align: center;">검색 하기</h1>
-<br>
-
+<div class="dash-board">
 <form id="search-form" action="${contextRoot}/app/search/all">
-
+<br>
+<div class="select" style="margin-left: -120px;">
 	<label class="checkbox-inline"> 
 	<input type="checkbox" name="option" id="inlineCheckbox1" value="all"> 전체검색
 	</label> 
@@ -37,7 +37,7 @@
 	<input type="checkbox" name="option" id="inlineCheckbox4" value="user"> 유저
 	</label> 
 	<br>
-	
+	</div>
 	<div class="search-container">
 		<input type="text" placeholder="⌨ 키워드를 입력해주세요!" name="keyword" id="search-bar">
 		<button class="search-icon">
@@ -45,7 +45,7 @@
 		</button>
 	</div>
 </form>
-
+</div>
 <div class="dash-board">
 	<div class="hot-curators">
 		<div class="title">
