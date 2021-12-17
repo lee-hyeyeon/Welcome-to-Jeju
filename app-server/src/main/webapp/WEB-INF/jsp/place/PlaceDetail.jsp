@@ -36,19 +36,29 @@
 <div class="mb-3 row">
 <h5>사진</h5>
   <c:forEach items="${photoList}" var="placePhoto">
+    ${placePhoto.writer.emoji}&nbsp;${placePhoto.writer.nickname}
+	  <c:if test="${loginUser.no eq placePhoto.writer.no}">
+      <a href="delete">❌</a>
+    </c:if>
 	  <a href="${contextPath}/upload/place/${placePhoto.filePath}">
 	    <img id="f-photo-image" src="${contextPath}/upload/place/${placePhoto.filePath}_100x100.jpg">
 	  </a>
+	  <br>
   </c:forEach>
 </div>
 
 <div class="mb-3 row">
 <h5>후기</h5>
   <c:forEach items="${commentList}" var="placeComment">
+    ${placeComment.writer.emoji}&nbsp;${placeComment.writer.nickname}
+    <c:if test="${loginUser.no eq placeComment.writer.no}">
+      <a href="delete">❌</a>
+    </c:if>
+    
 	  <div class = "col-sm-16">
 	  <input id='f-comment' type='text' name='comment' class="form-control" value="${placeComment.comment}" readonly>
 	  </div>
-	  <br><br>
+	  <br>
   </c:forEach>
 </div>
 

@@ -11,6 +11,8 @@
   
 	  <association property="writer" javaType="User">
 	    <id column="user_no" property="no"/>
+	    <result column="nickname" property="nickname"/>
+	    <result column="emoji" property="emoji"/>
 	  </association>
 	
 	  <association property="place" javaType="Place">
@@ -31,9 +33,13 @@
   
   <select id="findAllByPlaceId" resultMap="PlacePhotoMap" parameterType="String">
     select
-      file_path
+      pp.file_path,
+      u.user_no,
+      u.nickname,
+      u.emoji
     from
-      jeju_place_photo
+      jeju_place_photo pp
+      inner join jeju_user u on u.user_no=pp.user_no
     where
       place_id=#{id}
   </select>

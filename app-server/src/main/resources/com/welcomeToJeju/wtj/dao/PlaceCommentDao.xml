@@ -11,6 +11,8 @@
   
   <association property="writer" javaType="User">
     <id column="user_no" property="no"/>
+    <result column="nickname" property="nickname"/>
+    <result column="emoji" property="emoji"/>
   </association>
 
   <association property="place" javaType="Place">
@@ -32,9 +34,13 @@
   
   <select id="findAllByPlaceId" resultMap="PlaceCommentMap" parameterType="String">
     select
-      comment
+      c.comment,
+      u.user_no,
+      u.nickname,
+      u.emoji
     from
-      jeju_place_comment
+      jeju_place_comment c
+      inner join jeju_user u on u.user_no=c.user_no
     where
       place_id=#{id}
   </select>

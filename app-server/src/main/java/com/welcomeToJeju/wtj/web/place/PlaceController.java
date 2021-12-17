@@ -142,8 +142,6 @@ public class PlaceController {
     Collection<PlacePhoto> photoList = placePhotoDao.findAllByPlaceId(id);
     Collection<PlaceComment> commentList = placeCommentDao.findAllByPlaceId(id);
 
-    System.out.println(no);
-
     ModelAndView mv = new ModelAndView();
     mv.addObject("place", place);
     mv.addObject("photoList", photoList);
